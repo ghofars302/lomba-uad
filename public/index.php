@@ -35,10 +35,13 @@
             setcookie('theme', 1, time() + (86400 * 30), '/');
         }
 
+        echo $theme_enum;
         $new = $response->withHeader('Location', 'home.php');
+        $new = $new->withHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0');
+        $new = $new->withHeader('Pragma', 'no-cache');
         $new = $new->withStatus(301);
 
-        return $new;    
+        return $new; //$new;    
     });
 
     $app->run();

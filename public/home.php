@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>SMA Negeri 1 Pringsewu</title>
     <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="https://smansapringsewu.sch.id/wp-content/uploads/2019/07/favicon.png" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <?php
+        if (isset($_COOKIE['theme'])) {
+            if ($_COOKIE['theme'] == 2) {
+                echo '<link rel="stylesheet" href="css/mdb.dark.min.css" />';
+            } else {
+                echo '<link rel="stylesheet" href="css/mdb.light.min.css" />';
+            }
+        } else {
+            echo '<link rel="stylesheet" href="css/mdb.light.min.css" />';
+        }
+    ?>
   </head>
   <body>
     <!-- Start your project here-->
@@ -25,7 +35,17 @@
           <section draggable="false" class="overflow-hidden pt-0" data-v-271253ee="">
             <section class="" style="padding-bottom: 1px;">
               <!-- Navbar -->
-              <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-2">
+              <?php
+                if (isset($_COOKIE['theme'])) {
+                    if ($_COOKIE['theme'] == 2) {
+                        echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-2">';
+                    } else {
+                        echo '<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-2">';
+                    }
+                } else {
+                    echo '<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-2">';
+                }
+              ?>
                 <!-- Container wrapper -->
                 <div class="container-fluid">
                   <!-- Toggle button -->
@@ -36,21 +56,34 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Navbar brand -->
                     <a class="navbar-brand mt-2 mt-lg-0" draggable="false">
-                      <img src="https://smansapringsewu.sch.id/wp-content/uploads/2019/07/logo3-300x52.png" height="50" alt="Logo" loading="lazy" aria-controls="#picker-editor" draggable="false">
+                      <?php
+                        if (isset($_COOKIE['theme'])) {
+                            if ($_COOKIE['theme'] == 2) {
+                                echo '<img src="img/logo_dark.png" height="50" alt="Logo" loading="lazy" aria-controls="#picker-editor" draggable="false">';
+                            } else {
+                                echo '<img src="img/logo_light.png" height="50" alt="Logo" loading="lazy" aria-controls="#picker-editor" draggable="false">';
+                            }
+                        } else {
+                            echo '<img src="img/logo_light.png" height="50" alt="Logo" loading="lazy" aria-controls="#picker-editor" draggable="false">';
+                        }
+                      ?>
                     </a>
                     <!-- Left links -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="" aria-controls="#picker-editor" draggable="false">Beranda</a>
+                        <a class="nav-link" href="/" aria-controls="#picker-editor" draggable="false">Beranda</a>
+                      </li> 
+                      <li class="nav-item">
+                        <a class="nav-link" href="/profile" aria-controls="#picker-editor" draggable="false">Profile</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="" aria-controls="#picker-editor" draggable="false">Profile</a>
+                        <a class="nav-link" href="/ortom" aria-controls="#picker-editor" draggable="false">Organisasi</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="" aria-controls="#picker-editor" draggable="false">Organisasi</a>
+                        <a class="nav-link" href="/ektrakurikuler" aria-controls="#picker-editor" draggable="false">Ektra Kurikuler</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="" aria-controls="#picker-editor" draggable="false">Berita</a>
+                        <a class="nav-link" href="/berita" aria-controls="#picker-editor" draggable="false">Berita</a>
                       </li>
                     </ul>
                     <!-- Left links -->
@@ -60,10 +93,10 @@
                   <div class="d-flex align-items-center">
                     <!-- Icon -->
                     <a class="text-reset me-3" draggable="false">
-                      <i class="fab fa-facebook" aria-controls="#picker-editor"></i>
+                      <i class="fab fa-facebook" href="https://www.instagram.com/smansapringsewu/" aria-controls="#picker-editor"></i>
                     </a>
                     <a class="text-reset me-3" draggable="false">
-                      <i class="fab fa-instagram" aria-controls="#picker-editor"> SMA Negeri 1 Pringsewu</i>
+                      <i class="fab fa-instagram" href="https://www.instagram.com/smansapringsewu/" aria-controls="#picker-editor"> SMA Negeri 1 Pringsewu</i>
                     </a>
                   </div>
                   <!-- Right elements -->
@@ -80,7 +113,7 @@
           <!---->
           <section draggable="false" class="container pt-5" data-v-271253ee="">
             <section class="mb-10">
-              <div class="p-5 text-center bg-image" style="background-image: url(&quot;https://mdbootstrap.com/img/new/standard/nature/071.jpg&quot;); height: 500px; background-size: cover; background-position: 50% 50%; background-color: rgba(0, 0, 0, 0);" aria-controls="#picker-editor">
+              <div class="p-5 text-center bg-image" style="background-image: url(&quot;https://smansapringsewu.sch.id/wp-content/uploads/2020/07/DSC00663.jpg&quot;); height: 500px; background-size: cover; background-position: 50% 50%; background-color: rgba(0, 0, 0, 0);" aria-controls="#picker-editor">
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
                   <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="row d-flex justify-content-center">
@@ -91,7 +124,7 @@
                             <br>
                             <span class="">363</span>
                           </h2>
-                          <p class="text-white lead mb-0 px-4 px-md-5">Akreditasi sekolah: B, Alamat: Jl. Olahraga No.1, Pringsewu Bar., Kec. Pringsewu, Kabupaten Pringsewu, Lampung 35373, Indonesia</p>
+                          <p class="text-white lead mb-0 px-4 px-md-5">Akreditasi sekolah: A, Alamat: Jl. Olahraga No.1, Pringsewu Bar., Kec. Pringsewu, Kabupaten Pringsewu, Lampung 35373, Indonesia</p>
                         </div>
                       </div>
                     </div>
@@ -112,11 +145,11 @@
                 <div class="col-lg-4 col-md-12 mb-6 mb-lg-0">
                   <div class="card shadow-2-strong">
                     <div class="bg-image hover-overlay ripple shadow-4-strong rounded mx-3" data-mdb-ripple-color="light" style="margin-top: -15px">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/024.webp" class="img-fluid" alt="" aria-controls="#picker-editor">
+                      <img src="https://smansapringsewu.sch.id/wp-content/uploads/2022/06/DSC_0929-534x462.jpg" class="img-fluid" alt="" aria-controls="#picker-editor">
                     </div>
                     <div class="card-body">
-                      <h5 class="card-title">My paradise</h5>
-                      <p class="card-text">Ut pretium ultricies dignissim. Sed sit amet mi eget urna placerat vulputate. Ut vulputate est non quam dignissim elementum. Donec a ullamcorper diam.</p>
+                      <h5 class="card-title">DIALOG IMPLEMENTASI KURIKULUM MERDEKA DI SMA NEGERI 1 SEPUTIH BANYAK</h5>
+                      <p class="card-text">Menurut BSNP atau Badan Standar Nasional Pendidikan, pengertian kurikulum merdeka belajar adalah suatu kurikulum pembelajaran yang mengacu pada pendekatan bakat dan minat.</p>
                       <a href="#!" class="btn  btn-primary btn-rounded" aria-controls="#picker-editor">Read more</a>
                     </div>
                   </div>
@@ -188,7 +221,17 @@
           <section draggable="false" class="overflow-hidden pt-0" data-v-271253ee="">
             <section class="" style="padding-bottom: 1px;">
               <!-- Navbar -->
-              <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-2">
+              <?php
+                if (isset($_COOKIE['theme'])) {
+                    if ($_COOKIE['theme'] == 2) {
+                        echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-2">';
+                    } else {
+                        echo '<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-2">';
+                    }
+                } else {
+                    echo '<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-2">';
+                }
+              ?>
                 <!-- Container wrapper -->
                 <div class="container-fluid">
                   <!-- Toggle button -->
@@ -199,6 +242,9 @@
                   <div class="collapse navbar-collapse" id="navbarButtonsExample">
                     <!-- Left links -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link" aria-controls="#picker-editor">Copyright (c) 2022 Ghofar - This site purpose only for demonstration</a>
+                      </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#" aria-controls="#picker-editor">Privacy Policy</a>
                       </li>
@@ -212,13 +258,13 @@
                         <a class="nav-link" href="/change-theme" aria-controls="#picker-editor">
                             <?php
                                 if(isset($_COOKIE['theme'])){
-                                    if($_COOKIE['theme'] == '1'){
-                                        echo 'Switch to Dark Theme';
+                                    if($_COOKIE['theme'] == 2){
+                                        echo 'Switch to 🔆 Light Theme';
                                     }else{
-                                        echo 'Switch to Light Theme>';
+                                        echo 'Switch to 🌙 Dark Theme';
                                     }
                                 }else{
-                                    echo 'Switch to Dark Theme';
+                                    echo 'Switch to 🌙 Dark Theme';
                                 }
                             ?>
                         </a>
