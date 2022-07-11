@@ -103,6 +103,20 @@
         }
     });
 
+    $app->get('/api/struktur-img', function (Request $request, Response $response, array $args) {
+        $theme_enum = $_COOKIE['theme'] ?? 1;
+
+        if ($theme_enum == 2) {
+            $img = file_get_contents('./img/struktur.png');
+            $response->getBody()->write($img);
+            return $response->withHeader('Content-Type', 'image/png');
+        } else {
+            $img = file_get_contents('./img/struktur2.png');
+            $response->getBody()->write($img);
+            return $response->withHeader('Content-Type', 'image/png');
+        }
+    });
+
     $app->get('/[{path:.*}]', function(Request $request, Response $response, array $args) {
         if (count($args) > 0) {
             $bool_found = false;
@@ -135,8 +149,8 @@
                                 break;
                             }
 
-                            case "struktur-organisasi": {
-                                require '../page/profile/struktur-organisasi.php';
+                            case "struktur": {
+                                require '../page/profile/struktur.php';
                                 $bool_found = true;
                                 break;
                             }
@@ -152,6 +166,8 @@
                             break;
                         }
                     }
+
+                    break;
                 }
 
                 case "prestasi": {

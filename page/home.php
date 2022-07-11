@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>SMA Negeri 1 Pringsewu | Sejarah</title>
+        <title>SMA Negeri 1 Pringsewu | Home</title>
         <!-- MDB icon -->
         <link rel="icon" href="https://smansapringsewu.sch.id/wp-content/uploads/2019/07/favicon.png" type="image/x-icon" />
         <!-- Font Awesome -->
@@ -165,7 +165,7 @@
                     <div class="row gx-lg-5 align-items-center mb-5">
                         <div class="col-md-6 mb-4 mb-md-0">
                             <div class="bg-image hover-overlay ripple shadow-4-strong rounded-4 mb-4" data-mdb-ripple-color="light">
-                                <img src="https://mdbootstrap.com/img/new/standard/city/018.jpg" class="w-100" alt="" aria-controls="#picker-editor">
+                                <img src="/img/osis.jpg" class="w-100" alt="" aria-controls="#picker-editor">
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 mb-md-0">
@@ -176,7 +176,7 @@
                     <div class="row gx-lg-5 align-items-center mb-5 flex-lg-row-reverse">
                         <div class="col-md-6 mb-4 mb-md-0">
                             <div class="bg-image hover-overlay ripple shadow-4-strong rounded-4 mb-4" data-mdb-ripple-color="light">
-                                <img src="https://mdbootstrap.com/img/new/standard/city/032.jpg" class="w-100" alt="" aria-controls="#picker-editor">
+                                <img src="/img/pramuka.jpg" class="w-100" alt="" aria-controls="#picker-editor">
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 mb-md-0">

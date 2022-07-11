@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>SMA Negeri 1 Pringsewu | Sejarah</title>
+        <title>SMA Negeri 1 Pringsewu | Ekstrakurikuler</title>
         <!-- MDB icon -->
         <link rel="icon" href="https://smansapringsewu.sch.id/wp-content/uploads/2019/07/favicon.png" type="image/x-icon" />
         <!-- Font Awesome -->
