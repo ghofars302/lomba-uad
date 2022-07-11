@@ -94,11 +94,11 @@
                                     <!-- Right elements -->
                                     <div class="d-flex align-items-center">
                                         <!-- Icon -->
-                                        <a class="text-reset me-3" draggable="false">
-                                        <i class="fab fa-facebook" href="https://www.instagram.com/smansapringsewu/" aria-controls="#picker-editor"></i>
+                                        <a class="text-reset me-3" href="https://mobile.twitter.com/smansa363" draggable="false">
+                                            <i class="fab fa-twitter" aria-controls="#picker-editor"></i>
                                         </a>
-                                        <a class="text-reset me-3" draggable="false">
-                                        <i class="fab fa-instagram" href="https://www.instagram.com/smansapringsewu/" aria-controls="#picker-editor"> SMA Negeri 1 Pringsewu</i>
+                                        <a class="text-reset me-3" href="https://www.instagram.com/smansapringsewu/" draggable="false">
+                                            <i class="fab fa-instagram" aria-controls="#picker-editor"> SMA Negeri 1 Pringsewu</i>
                                         </a>
                                     </div>
                                     <!-- Right elements -->
