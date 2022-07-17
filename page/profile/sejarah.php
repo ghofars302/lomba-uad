@@ -20,7 +20,7 @@
         <!-- MDB -->
         <?php
             if (isset($_COOKIE['theme'])) {
-                if ($_COOKIE['theme'] == 2) {
+                if (isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2) {
                     echo '<link rel="stylesheet" href="/css/mdb.dark.min.css" />';
                 } else {
                     echo '<link rel="stylesheet" href="/css/mdb.light.min.css" />';
@@ -44,7 +44,7 @@
                     <section draggable="false" class="pt-0" data-v-271253ee="">
                         <section class="" style="padding-bottom: 1px;">
                             <!-- Navbar -->
-                            <nav id="navbar_top" class="navbar navbar-expand-lg <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-bottom">
+                            <nav id="navbar_top" class="navbar navbar-expand-lg <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-bottom">
                             <!-- Container wrapper -->
                             <div class="container-fluid container">
                                 <!-- Toggle button -->
@@ -101,7 +101,7 @@
                     </section>
                     <!---->
                 </div>
-                <div class="container <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?>">
+                <div class="container <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?>">
                     <div id="carouselSchoolImages" class="carousel slide carousel-fade" data-mdb-ride="carousel">
                         <!-- Indicators -->
                         <div class="carousel-indicators">
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <br/>
-                <div class="container <?php $_COOKIE['theme'] == 2 ? print 'bg-dark' : print 'bg-white' ?> rounded">
+                <div class="container <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print 'bg-dark' : print 'bg-white' ?> rounded">
                     <br/>
                     <p>SMA Negeri I Pringsewu dididrikan melalui perjalanan panjang.&nbsp;Dalam rangka mengembangkan pendidikan di Pringsewu khususnya sekolah lanjutan yang berstatus negeri terbentuk panitia tanggal 16 April 1960. Susunan panitia sebagai berikut :</p>
 
@@ -164,7 +164,7 @@
                     <section draggable="false" class="overflow-hidden pt-0" data-v-271253ee="">
                         <section class="" style="padding-top: 1px;">
                             <!-- Navbar -->
-                            <nav class="navbar navbar-expand <?php $_COOKIE['theme'] == 2 ? print 'navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 container">
+                            <nav class="navbar navbar-expand <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print 'navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 container">
                             <!-- Container wrapper -->
                             <div class="container-fluid">
                                 <!-- Toggle button -->
@@ -186,7 +186,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="/api/change-theme" aria-controls="#picker-editor">
-                                            <?php $_COOKIE['theme'] == 2 ? print 'Switch to 🌙 Dark Theme' : print 'Switch to 🔆 Light Theme' ?>
+                                            <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print 'Switch to 🌙 Dark Theme' : print 'Switch to 🔆 Light Theme' ?>
                                             </a>
                                         </li>
                                     </ul>

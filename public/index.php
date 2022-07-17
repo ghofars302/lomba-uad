@@ -53,7 +53,7 @@
 
     $app->get('/api/change-theme', function (Request $request, Response $response, array $args) {
         if (isset($_SERVER['HTTP_REFERER'])) {
-            $theme_enum = $_COOKIE['theme'] ?? 1;
+            $theme_enum = isset($_COOKIE['theme']) and $_COOKIE['theme'] ?? 1;
 
             if ($theme_enum == 1) {
                 setcookie('theme', 2, time() + (86400 * 30), '/');
@@ -76,7 +76,7 @@
     });
 
     $app->get('/api/logo-img', function (Request $request, Response $response, array $args) {
-        $theme_enum = $_COOKIE['theme'] ?? 1;
+        $theme_enum = isset($_COOKIE['theme']) and $_COOKIE['theme'] ?? 1;
 
         if ($theme_enum == 2) {
             $img = file_get_contents('./img/logo_dark.png');
@@ -90,7 +90,7 @@
     });
 
     $app->get('/api/background-img', function (Request $request, Response $response, array $args) {
-        $theme_enum = $_COOKIE['theme'] ?? 1;
+        $theme_enum = isset($_COOKIE['theme']) and $_COOKIE['theme'] ?? 1;
 
         if ($theme_enum == 2) {
             $img = file_get_contents('./img/background.png');
@@ -104,7 +104,7 @@
     });
 
     $app->get('/api/struktur-img', function (Request $request, Response $response, array $args) {
-        $theme_enum = $_COOKIE['theme'] ?? 1;
+        $theme_enum = isset($_COOKIE['theme']) and $_COOKIE['theme'] ?? 1;
 
         if ($theme_enum == 2) {
             $img = file_get_contents('./img/struktur.png');

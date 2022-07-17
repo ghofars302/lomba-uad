@@ -19,7 +19,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!-- MDB -->
         <?php
-            if ($_COOKIE['theme'] == 2) {
+            if (isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2) {
                 echo '<link rel="stylesheet" href="/css/mdb.dark.min.css" />';
             } else {
                 echo '<link rel="stylesheet" href="/css/mdb.light.min.css" />';
@@ -40,9 +40,9 @@
                     <section draggable="false" class="pt-0" data-v-271253ee="">
                         <section class="" style="padding-bottom: 1px;">
                             <!-- Navbar -->
-                            <nav id="navbar_top" class="navbar navbar-expand-lg <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-bottom">
+                            <nav id="navbar_top" class="navbar navbar-expand-lg <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-bottom">
                             <!-- Container wrapper -->
-                            <div class="container-fluid container <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?>">
+                            <div class="container-fluid container <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?>">
                                 <!-- Toggle button -->
                                 <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <i class="fas fa-bars"></i>
@@ -97,10 +97,10 @@
                     </section>
                     <!---->
                 </div>
-                <div class="container <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> pt-5">
+                <div class="container <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> pt-5">
                     <h2 class="fw-bold mb-7 text-center">Berita/Prestasi Sekolah</h2>
                     <?php
-                        $raw_json = file_get_contents("js/news2.json");
+                        $raw_json = file_get_contents("./js/news2.json");
                         $file_contents = json_decode($raw_json, true);
                     ?>
                     <div class="row gx-lg-5">

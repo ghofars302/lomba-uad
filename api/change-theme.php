@@ -1,6 +1,6 @@
 <?php
     if ($_SERVER['HTTP_REFERER'] != null) {
-        $cookie_enum = $_COOKIE['theme'] ?? 1;
+        $cookie_enum = isset($_COOKIE['theme']) and $_COOKIE['theme'] ?? 1;
 
         if ($cookie_enum == 2) {
             setcookie('theme', 1, time() + (86400 * 30), '/');

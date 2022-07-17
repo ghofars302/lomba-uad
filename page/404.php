@@ -43,7 +43,7 @@
                     <section draggable="false" class="pt-0" data-v-271253ee="">
                         <section class="" style="padding-bottom: 1px;">
                             <!-- Navbar -->
-                            <nav id="navbar_top" class="navbar navbar-expand-lg <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-bottom">
+                            <nav id="navbar_top" class="navbar navbar-expand-lg <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-bottom">
                                 <!-- Container wrapper -->
                                 <div class="container-fluid container">
                                     <!-- Toggle button -->
@@ -111,7 +111,7 @@
                     <!---->
                 </div>
                 <div class="py-5 text-center">
-                    <div class="container rounded <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> pb-md-5">
+                    <div class="container rounded <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> pb-md-5">
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-10">
                                 <h1 class="my-5 display-3 fw-bold ls-tight">
@@ -137,7 +137,7 @@
                     <section draggable="false" class="overflow-hidden pt-0" data-v-271253ee="">
                         <section class="" style="padding-bottom: 1px;">
                             <!-- Navbar -->
-                            <nav id="navbar_top" class="navbar navbar navbar-expand fixed-bottom container <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-top">
+                            <nav id="navbar_top" class="navbar navbar navbar-expand fixed-bottom container <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-top">
                                 <!-- Container wrapper -->
                                 <div class="container-fluid">
                                     <!-- Toggle button -->

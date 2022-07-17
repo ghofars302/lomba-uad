@@ -20,7 +20,7 @@
         <!-- MDB -->
         <?php
             if (isset($_COOKIE['theme'])) {
-                if ($_COOKIE['theme'] == 2) {
+                if (isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2) {
                     echo '<link rel="stylesheet" href="/css/mdb.dark.min.css" />';
                 } else {
                     echo '<link rel="stylesheet" href="/css/mdb.light.min.css" />';
@@ -44,7 +44,7 @@
                     <section draggable="false" class="pt-0" data-v-271253ee="">
                         <section class="" style="padding-bottom: 1px;">
                             <!-- Navbar -->
-                            <nav id="navbar_top" class="navbar navbar-expand-lg <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-bottom">
+                            <nav id="navbar_top" class="navbar navbar-expand-lg <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?> shadow-2 rounded-bottom">
                             <!-- Container wrapper -->
                             <div class="container-fluid container">
                                 <!-- Toggle button -->
@@ -101,7 +101,7 @@
                     </section>
                     <!---->
                 </div>
-                <div class="container <?php $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?>">
+                <div class="container <?php isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2 ? print ' navbar-dark bg-dark' : print 'navbar-light bg-white' ?>">
                     <br/>
                     <p class="fs-1 text-center">Daftar - Daftar Ekstrakurikuler di SMA Negeri 1 Pringsewu</p>
                     <br/>
@@ -113,7 +113,7 @@
                         </thead>
                         <tbody>
                             <?php
-                                $json = file_get_contents('js/ektrakurikuler.json');
+                                $json = file_get_contents('./js/ektrakurikuler.json');
                                 $ekstrakurikuler = json_decode($json, true);
                                 foreach ($ekstrakurikuler as $key => $value) {
                                 echo '<tr>';
@@ -135,7 +135,7 @@
                             <!-- Navbar -->
                             <?php
                                 if (isset($_COOKIE['theme'])) {
-                                    if ($_COOKIE['theme'] == 2) {
+                                    if (isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2) {
                                         echo '<nav class="navbar navbar-expand navbar-dark bg-dark shadow-2 container">';
                                     } else {
                                         echo '<nav class="navbar navbar-expand navbar-light bg-white shadow-2 container">';
@@ -167,7 +167,7 @@
                                             <a class="nav-link" href="/api/change-theme" aria-controls="#picker-editor">
                                             <?php
                                                 if(isset($_COOKIE['theme'])){
-                                                    if($_COOKIE['theme'] == 2){
+                                                    if(isset($_COOKIE['theme']) and $_COOKIE['theme'] == 2){
                                                         echo 'Switch to 🔆 Light Theme';
                                                     }else{
                                                         echo 'Switch to 🌙 Dark Theme';
