@@ -197,7 +197,7 @@
                                 <div class="bg-image hover-overlay ripple shadow-4-strong rounded mx-3" data-mdb-ripple-color="light" style="margin-top: -15px">
                                     <?php
                                         $img = $file_contents[0]['Image'];
-                                        echo '<img src="'.$img.'" class="card-img-top" alt="'.$file_contents[0].Title.'" aria-controls="#picker-editor">';
+                                        echo '<img src="'.$img.'" class="card-img-top" alt="'.$file_contents[0]['Title'].'" aria-controls="#picker-editor">';
                                     ?>
                                 </div>
                                 <div class="card-body">
@@ -217,7 +217,7 @@
                                 <div class="bg-image hover-overlay ripple shadow-4-strong rounded mx-3" data-mdb-ripple-color="light" style="margin-top: -15px">
                                     <?php
                                         $img = $file_contents[1]['Image'];
-                                        echo '<img src="'.$img.'" class="card-img-top" alt="'.$file_contents[1].Title.'" aria-controls="#picker-editor">';
+                                        echo '<img src="'.$img.'" class="card-img-top" alt="'.$file_contents[1]['Title'].'" aria-controls="#picker-editor">';
                                     ?>
                                 </div>
                                 <div class="card-body">
@@ -237,7 +237,7 @@
                                 <div class="bg-image hover-overlay ripple shadow-4-strong rounded mx-3" data-mdb-ripple-color="light" style="margin-top: -15px">
                                     <?php
                                         $img = $file_contents[2]['Image'];
-                                        echo '<img src="'.$img.'" class="card-img-top" alt="'.$file_contents[2].Title.'" aria-controls="#picker-editor">';
+                                        echo '<img src="'.$img.'" class="card-img-top" alt="'.$file_contents[2]['Title'].'" aria-controls="#picker-editor">';
                                     ?>
                                 </div>
                                 <div class="card-body">
